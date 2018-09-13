@@ -3,12 +3,13 @@ public class Question1
 {
 	public static void main(String[] args) 
 	{
-		printSomething("This is an example",5);
+		printSomething("This is an example");
 	}
 
-	public static void printSomething(String s,int x)
+	public static void printSomething(String s)
 	{
-		//usage:print(the string you need to print, how many times it prints)
+		
+		int x = s.length();
 		for (int i = 0; i < x; i++) 
 		{
 			System.out.println(s);
