@@ -13,7 +13,7 @@ public class Question3
 	{
 		for(int i=a.length();i>=1;i--)
 		{
-			System.out.print(a.substring(i-1, i));
+			System.out.print(a.charAt(i-1));
 		}
 	}
 }
