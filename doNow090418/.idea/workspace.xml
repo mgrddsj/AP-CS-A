@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62826ced-9795-4d12-8495-1c963df6ad22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doNow090418.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_windows/git.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_windows/laf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_windows/path.macros.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../codestyles/Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../colors.scheme.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../debugger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../github_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ide-features-trainer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdk.table.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project.default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui.lnf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vcs.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="62826ced-9795-4d12-8495-1c963df6ad22" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +13,12 @@
     <session id="-1114894069">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doNow090418/AssignmentToday4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -108,7 +88,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="196" />
+    <option name="x" value="195" />
     <option name="y" value="70" />
     <option name="width" value="1320" />
     <option name="height" value="840" />
@@ -215,6 +195,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,8 +219,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +312,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" weight="0.3297587" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49803922" visible="true" weight="0.23627844" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49803922" visible="true" weight="0.23895583" />
       <window_info id="Structure" order="2" sideWeight="0.5019608" side_tool="true" weight="0.2272118" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -423,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doNow090418/AssignmentToday4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
