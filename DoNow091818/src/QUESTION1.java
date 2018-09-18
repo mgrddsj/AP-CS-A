@@ -4,7 +4,7 @@ public class QUESTION1
 
 	public static void main(String[] args)
 	{
-		
+		combine("Hello ","world!!!");//Sample usage
 	}
 
 	
