@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class BMI 
 {
+
 	public static void main(String[] args) 
 	{
 		Scanner in = new Scanner(System.in);
@@ -33,7 +34,7 @@ public class BMI
 
     public static void bmiDescription(double bmi)
     {
-     System.out.print("Your BMI: " + bmi);
+     System.out.println("Your BMI: " + bmi);
      if(bmi<18.5) {
          System.out.println("Underweighted");
      } else if(bmi<24.9) {
