@@ -14,20 +14,18 @@ public class DONOW100918
 		{
 			if(first%2!=0)
 				first++;
-			for(int i=first;i<=second;i+=2)
-			{
-				System.out.print(i + " ");
-			}
 		}
 		else
 		{
 			if(first%2==0)
 				first++;
-			for(int i=first;i<=second;i+=2)
-			{
-				System.out.print(i + " ");
-			}
+		}
+		
+		for(int i=first;i<=second;i+=2)
+		{
+			System.out.print(i + " ");
 		}
 		
 	}
+	
 }
