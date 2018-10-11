@@ -34,14 +34,14 @@ public class BMI
 
     public static void bmiDescription(double bmi)
     {
-     System.out.println("Your BMI: " + bmi);
-     if(bmi<18.5) {
-         System.out.println("Underweighted");
-     } else if(bmi<24.9) {
+    	System.out.println("Your BMI: " + bmi);
+    	if(bmi<18.5) {
+        System.out.println("Underweighted");
+    	} else if(bmi<24.9) {
          System.out.println("Normal");
-     } else if(bmi<29.9) {
+    	} else if(bmi<29.9) {
          System.out.println("Overweighted");
-     } else {
+    	} else {
          System.out.println("Obese");
     }
 }
