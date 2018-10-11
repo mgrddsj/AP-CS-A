@@ -1,4 +1,6 @@
 //Exercise 4 on pg.309
+
+/*
 public class EXERCISES4 
 {
 
@@ -20,3 +22,5 @@ public class EXERCISES4
 		}
 	}
 }
+
+*/
