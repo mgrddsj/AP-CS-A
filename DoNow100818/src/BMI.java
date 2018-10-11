@@ -13,7 +13,7 @@ public class BMI
 		System.out.println("Please input your weight (in kilograms) :");
 		double weight1 = in.nextDouble();
 		
-		double bmi1=weight1/(height1 * height1);
+		double bmi1=weight1/((height1 /100) * (height1 / 100));
 
 		
 		System.out.println("Input the information of the second person:");
@@ -22,7 +22,7 @@ public class BMI
 		System.out.println("Please input your weight (in kilograms) :");
 		double weight2 = in.nextDouble();
 		
-		double bmi2=weight2/(height2 * height2);
+		double bmi2=weight2/((height2 / 100) * (height2 / 100));
 		
 		System.out.println("First person:");
 		bmiDescription(bmi1);
