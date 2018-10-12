@@ -9,6 +9,7 @@ public class PROGRAMMINGPROJECT2_PG313 {
 
 	public static int dayOfWeek(int month,int day,int year)
 	{
+		int lastDigitsOfYear = Integer.parseInt(("" + year).substring(2, 3));
 		
 	}
 }
