@@ -1,4 +1,4 @@
-
+//Prime numbers 
 public class QUESTION1 
 {
 
