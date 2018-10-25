@@ -17,19 +17,19 @@ public class Vowels
 		while (text.indexOf(".")==-1)
 		{
 			text += in.next();
-			
 		}
 		
 		for (int i = 0;i<=text.length()-1;i++)
 		{
-			if (	("" + text.charAt(i)).equals("a")||
-					("" + text.charAt(i)).equals("e")||
-					("" + text.charAt(i)).equals("i")||
-					("" + text.charAt(i)).equals("o")||
-					("" + text.charAt(i)).equals("u"))
+			if (	("" + text.charAt(i)).equalsIgnoreCase("a")||
+					("" + text.charAt(i)).equalsIgnoreCase("e")||
+					("" + text.charAt(i)).equalsIgnoreCase("i")||
+					("" + text.charAt(i)).equalsIgnoreCase("o")||
+					("" + text.charAt(i)).equalsIgnoreCase("u"))
 				vowels++;
 		}
 		
 		System.out.println("vowels = " + vowels);
+		in.close();
 	}
 }
