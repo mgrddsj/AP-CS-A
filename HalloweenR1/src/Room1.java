@@ -30,9 +30,9 @@ public class Room1
 		
 		Thread.sleep(5000);
 		printw("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-		printw("Please proceed. ");
+		printw("Password: 11010");
 		Thread.sleep(1000);
-		printw("\nReset Password. \n");
+		printw("\nPassword has been RESET. \n");
 		
 		newpw();
 		
@@ -159,7 +159,24 @@ public class Room1
 	public static void newpw() throws InterruptedException
 	{
 		printw("Password has reset, \n");
-		System.out.println("0 = 0\n1=1\n2 = 10\n");
+		System.out.println(
+				"Hint: \n"
+				+ "0 = 0"
+				+ "1 = 1"
+				+ "10 = 2"
+				+ "11 = 3"
+				+ "100 = 4"
+				+ "101 = 5"
+				+ "110 = 6"
+				+ "111 = 7"
+				+ "1000 = 8"
+				+ "1001 = 9"
+				+ "1010 = 10"
+				+ "1011 = 11"
+				+ "1100 = 12"
+				+ "1101 = 13"
+				+ "1110 = 14"
+				+ "1111 = 15");
 		printw("You have 5 chances to try the new password(optional)\n");
 		for (int trials=1;trials<=5;trials++)
 		{
