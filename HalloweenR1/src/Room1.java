@@ -31,15 +31,32 @@ public class Room1
 		Thread.sleep(5000);
 		printw("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		printw("Please proceed. ");
-		Thread.sleep(500);
-		printw("\nReset Password. ");
+		Thread.sleep(1000);
+		printw("\nReset Password. \n");
+		
+		newpw();
+		
+		Thread.sleep(2000);
+		printw("Please proceed to next room\n");
+		
+		Thread.sleep(10000);
+		System.out.println("Press enter to exit. ");
+		Scanner in = new Scanner(System.in);
+		in.nextLine();
+		in.close();
 		
 	}
 
 	public static void answer(int res)
 	{
 		Scanner in = new Scanner(System.in);
-		if (Integer.parseInt(("" + (in.next()).toLowerCase().charAt(0))) == 1)
+		String input = in.nextLine();
+		while (!input.matches("[0-1]+"))
+		{
+			System.out.println("Please input only 0 or 1! ");
+			input = in.nextLine();
+		}
+		if (Integer.parseInt(("" + (input).charAt(0))) == 1)
 		{
 			if (res==3)
 			{
@@ -78,19 +95,27 @@ public class Room1
 		}
 	}
 	
+	/*	
 	public static void restart()
 	{
 		System.out.println("Restart? (Y/N)");
 		Scanner in = new Scanner(System.in);
-		if (Integer.parseInt(("" + (in.next()).toLowerCase().charAt(0))) == 1)
+		String input = in.nextLine();
+		if (Integer.parseInt(("" + (input).toLowerCase().charAt(0))) == 1)
 			System.exit(0);
 	}
+	*/
 	
 	public static void passwordVerification()
 	{
 		int password = 11010;
 		Scanner in = new Scanner(System.in);
 		String input = in.nextLine();
+		while (!input.matches("[0-1]+"))
+		{
+			System.out.println("Please input only 0 or 1! ");
+			input = in.nextLine();
+		}
 		if (Integer.parseInt(input) != password)
 		{
 			System.out.println("\nWrong password! \nPassword: ");
@@ -114,7 +139,7 @@ public class Room1
 	
 	public static void trapped() throws InterruptedException
 	{
-		String trap = "\n\n\n...\nTRAPPED! ";
+		String trap = "\n\n\n...\nU R TRAPPED! ";
 		for (int i=0;i<=trap.length()-1;i++)
 		{
 			System.out.print(trap.charAt(i));
@@ -129,5 +154,41 @@ public class Room1
 			System.out.print(text.charAt(i));
 			Thread.sleep(10);
 		}
+	}
+	
+	public static void newpw() throws InterruptedException
+	{
+		printw("Password has reset, \n");
+		System.out.println("0 = 0\n1=1\n2 = 10\n");
+		printw("You have 5 chances to try the new password(optional)\n");
+		for (int trials=1;trials<=5;trials++)
+		{
+			if (inputForPW() == 26)
+			{
+				printw("Password verified! \nIngredient received: Uranium\n");
+				break;
+			}
+			else 
+			{
+				if (trials == 5)
+					System.out.println("Wrong! Access denied! ");
+				else 
+					System.out.println("Wrong! Try again! You have " + (5-trials) + " more chances. ");
+			}
+		}
+	}
+	
+	public static int inputForPW()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Password: ");
+		String input = in.nextLine();
+		while (!input.matches("[0-9]+"))
+		{
+			System.out.println("Please only input numbers");
+			input = in.nextLine();
+		}
+		int result = Integer.parseInt(input);
+		return result;
 	}
 }
