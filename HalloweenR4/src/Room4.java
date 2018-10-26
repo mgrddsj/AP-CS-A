@@ -1,11 +1,18 @@
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Room4 
 {
 
-	public static void main(String[] args) throws InterruptedException 
+	public static void main(String[] args) throws InterruptedException, IOException 
 	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
+		
 		printw(
 				"Tick tock.\r\n" + 
 				"Time is ticking.\r\n" + 
@@ -21,19 +28,17 @@ public class Room4
 				"PLEASE REENTER PASSWORD\r\n");
 		printw(
 				"HINT: WRITTEN MEMORIES ON BOOKS RECORDING DAYS\r\n" + 
-				"*SJHmatchJHHBGFtheJAGABGGyearsHGFofHJBcode*");
+				"*SJHmatchJHHBGFtheJAGABGGyearsHGFofHJBcodeSIFJtoLJF2018LJcalenderIHU*");
 		
 		wait(2000);
 		password();
 		
-		System.out.println("\n\nPlease proceed to next room. ");
+		System.out.println("\n\nPlease proceed to room 5. ");
 		
 		wait(10000);
 		System.out.println("Press enter to exit. ");
-		Scanner in = new Scanner(System.in);
 		in.nextLine();
 		in.close();
-		
 	}
 
 	public static void printw(String text) throws InterruptedException

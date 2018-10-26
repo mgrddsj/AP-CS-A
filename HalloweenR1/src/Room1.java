@@ -1,11 +1,17 @@
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Room1 
 {
 
-	public static void main(String[] args) throws InterruptedException 
+	public static void main(String[] args) throws InterruptedException, IOException 
 	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
 		System.out.println("Instructions: \nTo answer Yes, type 1, \nTo answer No, type 0. \n\n\n");
 		Thread.sleep(5000);
 		
@@ -28,7 +34,7 @@ public class Room1
 		
 		trapped();
 		
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		printw("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		printw("Password: 11010");
 		Thread.sleep(1000);
@@ -37,11 +43,10 @@ public class Room1
 		newpw();
 		
 		Thread.sleep(2000);
-		printw("Please proceed to next room\n");
+		printw("Please proceed to room 2 (Room is not in order. Please go to the correct room.) \n");
 		
 		Thread.sleep(10000);
 		System.out.println("Press enter to exit. ");
-		Scanner in = new Scanner(System.in);
 		in.nextLine();
 		in.close();
 		
@@ -158,25 +163,25 @@ public class Room1
 	
 	public static void newpw() throws InterruptedException
 	{
-		printw("Password has reset, \n");
 		System.out.println(
 				"Hint: \n"
-				+ "0 = 0"
-				+ "1 = 1"
-				+ "10 = 2"
-				+ "11 = 3"
-				+ "100 = 4"
-				+ "101 = 5"
-				+ "110 = 6"
-				+ "111 = 7"
-				+ "1000 = 8"
-				+ "1001 = 9"
-				+ "1010 = 10"
-				+ "1011 = 11"
-				+ "1100 = 12"
-				+ "1101 = 13"
-				+ "1110 = 14"
-				+ "1111 = 15");
+				+ "Binary -> Decimal \n"
+				+ "0 = 0\n"
+				+ "1 = 1\n"
+				+ "10 = 2\n"
+				+ "11 = 3\n"
+				+ "100 = 4\n"
+				+ "101 = 5\n"
+				+ "110 = 6\n"
+				+ "111 = 7\n"
+				+ "1000 = 8\n"
+				+ "1001 = 9\n"
+				+ "1010 = 10\n"
+				+ "1011 = 11\n"
+				+ "1100 = 12\n"
+				+ "1101 = 13\n"
+				+ "1110 = 14\n"
+				+ "1111 = 15\n");
 		printw("You have 5 chances to try the new password(optional)\n");
 		for (int trials=1;trials<=5;trials++)
 		{

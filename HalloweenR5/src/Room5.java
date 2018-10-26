@@ -10,6 +10,12 @@ public class Room5
 
 	public static void main(String[] args) throws InterruptedException, IOException 
 	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
+		
 		printw(
 				"Hi there!\r\n" + 
 				"See the two things on the table?\r\n" + 
@@ -26,14 +32,13 @@ public class Room5
 				"\n");
 		
 		System.out.println("Press enter to continue. ");
-		Scanner in = new Scanner(System.in);
 		in.nextLine();
 		
 		cls();
 		System.out.println(
 				" \r\n" + 
 				"To start on one module:\r\n" + 
-				"Type: defuse module X (X is the number of the module)\r\n" + 
+				"Type: defuse X (X is the number of the module)\r\n" + 
 				" \r\n" + 
 				"THE WIRE MODULE:\r\n" + 
 				"To cut a wire:\r\n" + 
@@ -49,6 +54,7 @@ public class Room5
 				"(l for left, r for right, u for up, d for down)\r\n" + 
 				"\n");
 		
+		Thread.sleep(5000);
 		System.out.println("Please hit enter after finished reading. ");
 		in.nextLine();
 		
@@ -58,11 +64,17 @@ public class Room5
 				"BOMB DEFUSER PROGRAM START\r\n" + 
 				"");
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		call();
 		
-		
-		
+		Thread.sleep(2000);
+		System.out.println("\n\nPlease proceed to room 6. ");
+
+		Thread.sleep(10000);
+		System.out.println("Press enter to exit. ");
+		in.nextLine();
+		in.close();
+			
 	}
 
 	public static void printw(String text) throws InterruptedException
@@ -83,24 +95,217 @@ public class Room5
 	
 	public static void call() throws IOException, InterruptedException
 	{
-		int x = 180; // wait 180 seconds at most
+		int x = 240; // wait 240 seconds at most
 
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		long startTime = System.currentTimeMillis();
-		String input = "";
-		while ((System.currentTimeMillis() - startTime) < x * 1000 && !in.ready()) 
+		/*while ((System.currentTimeMillis() - startTime) < x * 1000 && !in.ready()) 
 		{
-			cls();
-			System.out.println("Time remaining: " + ((180000-(System.currentTimeMillis() - startTime))/1000) + "s");
-			System.out.println("Command: " + input);
-			Thread.sleep(999);
+			System.out.println("Time remaining: " + ((240000-(System.currentTimeMillis() - startTime))/1000) + "s");
 		}
 
 		if (in.ready()) {
-		    input += in.read();
-		    in.reset();
+			
 		} else {
 		    System.out.println("You did not finish it! Bad luck! ");
+		}*/
+		
+		String input = in.readLine();
+		while (!input.equalsIgnoreCase("defuse 2")&&!input.equalsIgnoreCase("defuse 7"))
+		{
+			System.out.println("Failed to select... :(");
+			input = in.readLine();
 		}
+		
+		
+		
+		
+		if (input.equalsIgnoreCase("defuse 2"))
+		{
+			System.out.println("Module 2 Selected. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("cut 4"))
+			{
+				System.out.println("Wrong wire! Time -5s");
+				startTime -= 5000;
+				System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			}
+			System.out.println("Cut. Module Defused. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			press();
+			System.out.println("Pressed. Module Defused. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("defuse 9"))
+			{
+				System.out.println("Failed to select. ");
+			}
+			System.out.println("Module 9 selected. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("DRUURURRULULDLDLDLUURUR"))
+			{
+				System.out.println("Hit wall. Restarting... Time -5s");
+				startTime -= 5000;
+				System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+				System.out.println("Please input the maze sequence again: ");
+			}
+			System.out.println("Done. Module Defused. ");
+			System.out.println("Time used: " + (System.currentTimeMillis() - startTime)/1000 + "s");
+			
+			if ((240000-(System.currentTimeMillis() - startTime))>=0)
+			{
+				printw(
+						"Data deleted stopped.\r\n" + 
+						"Cure data: Zinc.\r\n" + 
+						" \r\n" + 
+						"Well done.\r\n" + 
+						"But you cannot stop us!\r\n" + 
+						"The virus--- the virus that can control peoples' minds;\r\n" + 
+						"the virus that delete any thought;\r\n" + 
+						"has already spread.\r\n" + 
+						"You cannot stop us!\r\n" + 
+						"---Anthropos Conrumpo\r\n" + 
+						"\n");
+			}
+			else 
+			{
+				System.out.println("Sorry, you didn't finish in time. ");
+			}
+		}
+		
+		//version B start
+		if (input.equalsIgnoreCase("defuse 7"))
+		{
+			System.out.println("Module 7 Selected. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("cut 4"))
+			{
+				System.out.println("Wrong wire! Time -5s");
+				startTime -= 5000;
+				System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			}
+			System.out.println("Cut. Module Defused. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			press2();
+			System.out.println("Pressed. Module Defused. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("defuse 1"))
+			{
+				System.out.println("Failed to select. ");
+			}
+			System.out.println("Module 1 selected. ");
+			System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+			
+			while (!in.readLine().equalsIgnoreCase("RRRDRURDDLDLLDRRDRRRRUURD"))
+			{
+				System.out.println("Hit wall. Restarting... Time -5s");
+				startTime -= 5000;
+				System.out.println("Time left: " + (240000-(System.currentTimeMillis() - startTime))/1000 + "s");
+				System.out.println("Please input the maze sequence again: ");
+			}
+			System.out.println("Done. Module Defused. ");
+			System.out.println("Time used: " + (System.currentTimeMillis() - startTime)/1000 + "s");
+			
+			if ((240000-(System.currentTimeMillis() - startTime))>=0)
+			{
+				printw(
+						"Data deleted stopped.\r\n" + 
+						"Cure data: Zinc.\r\n" + 
+						" \r\n" + 
+						"Well done.\r\n" + 
+						"But you cannot stop us!\r\n" + 
+						"The virus--- the virus that can control peoples' minds;\r\n" + 
+						"the virus that delete any thought;\r\n" + 
+						"has already spread.\r\n" + 
+						"You cannot stop us!\r\n" + 
+						"---Anthropos Conrumpo\r\n" + 
+						"\n");
+			}
+			else 
+			{
+				System.out.println("Sorry, you didn't finish in time. ");
+			}
+		}
+		//end
+	}
+	
+	public static void press() throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		while(!in.readLine().equalsIgnoreCase("defuse 6"))
+		{
+			System.out.println("You cannot do that! ");
+		}
+		System.out.println("Module 6 selected. ");
+		
+		if (!in.readLine().equalsIgnoreCase("Press 3"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("Press 2"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("press 4"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("press 1"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		
+	}
+	
+	public static void press2() throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		while(!in.readLine().equalsIgnoreCase("defuse 4"))
+		{
+			System.out.println("You cannot do that! ");
+		}
+		System.out.println("Module 4 selected. ");
+		
+		if (!in.readLine().equalsIgnoreCase("Press 2"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("Press 4"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("press 3"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		if (!in.readLine().equalsIgnoreCase("press 1"))
+		{
+			System.out.println("Wrong button. You need to select the module again. ");
+			press();
+			return;
+		}
+		
 	}
 }

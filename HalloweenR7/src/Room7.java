@@ -11,6 +11,11 @@ public class Room7
 		in.nextLine();
 		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 		
+		
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
 		printw(
 				"SIMULATION INFO TRANSPORTING AREA\r\n" + 
 				"\r\n" + 
@@ -64,6 +69,10 @@ public class Room7
 				"PLEASE TRANSMIT INFO,\r\n" + 
 				"CURE INGREDIENTS:");
 		ingredient();
+		
+		Thread.sleep(2000);
+		System.out.println("\n\nPlease proceed to next room. ");
+
 		
 		wait(10000);
 		System.out.println("Press enter to exit. ");

@@ -26,7 +26,7 @@ public class Room2
 		Thread.sleep(1000);
 		password();
 		
-		System.out.println("\nPlease proceed to next room. ");
+		System.out.println("\nPlease proceed to room 3. ");
 		
 		wait(10000);
 		System.out.println("Press enter to exit. ");

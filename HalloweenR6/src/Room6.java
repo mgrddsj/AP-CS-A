@@ -1,11 +1,18 @@
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
-
+//Need PASSWORD!
 public class Room6 
 {
 
-	public static void main(String[] args) throws InterruptedException 
+	public static void main(String[] args) throws InterruptedException, IOException 
 	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
+		
 		printw(
 				"When time stops \r\n" + 
 				"When words fade \r\n" + 
@@ -17,6 +24,14 @@ public class Room6
 				"Lights will find its way");
 		
 		password();
+		
+		Thread.sleep(2000);
+		System.out.println("\n\nPlease proceed to room 7. ");
+
+		Thread.sleep(10000);
+		System.out.println("Press enter to exit. ");
+		in.nextLine();
+		in.close();
 	}
 
 	public static void printw(String text) throws InterruptedException

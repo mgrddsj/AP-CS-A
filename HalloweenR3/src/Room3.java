@@ -1,11 +1,18 @@
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Room3 
 {
 
-	public static void main(String[] args) throws InterruptedException 
+	public static void main(String[] args) throws InterruptedException, IOException 
 	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Start playing by pressing enter. ");
+		in.nextLine();
+		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		
+		
 		printw(
 				"Flicker.\r\n" + 
 				"The lights went out.\r\n" + 
@@ -18,11 +25,10 @@ public class Room3
 		wait(2000);
 		password();
 		
-		System.out.println("\n\nPlease proceed to next room. ");
+		System.out.println("\n\nPlease proceed to room 4. ");
 		
 		wait(10000);
 		System.out.println("Press enter to exit. ");
-		Scanner in = new Scanner(System.in);
 		in.nextLine();
 		
 	}
@@ -48,13 +54,13 @@ public class Room3
 		Scanner in = new Scanner(System.in);
 		System.out.print("\nPassword: ");
 		String input = in.nextLine();
-		if (input.equalsIgnoreCase("HARD"))
+		if (input.equalsIgnoreCase("reloading"))
 		{
 			accessGranted();
 			Thread.sleep(1000);
 			hiddenMessage();
 		}
-		else if (input.equalsIgnoreCase("EASY"))
+		else if (input.equalsIgnoreCase("simulation"))
 			{
 				accessGranted();
 				wait(2000);
@@ -115,7 +121,7 @@ public class Room3
 		for (int trials=1;trials<=5;trials++)
 		{
 			System.out.print("Password: ");
-			if (in.next().equalsIgnoreCase("HARD"))
+			if (in.next().equalsIgnoreCase("reloading"))
 			{
 				hiddenMessage();
 				break;
