@@ -285,25 +285,25 @@ public class Room5
 		if (!in.readLine().equalsIgnoreCase("Press 2"))
 		{
 			System.out.println("Wrong button. You need to select the module again. ");
-			press();
+			press2();
 			return;
 		}
 		if (!in.readLine().equalsIgnoreCase("Press 4"))
 		{
 			System.out.println("Wrong button. You need to select the module again. ");
-			press();
+			press2();
 			return;
 		}
 		if (!in.readLine().equalsIgnoreCase("press 3"))
 		{
 			System.out.println("Wrong button. You need to select the module again. ");
-			press();
+			press2();
 			return;
 		}
 		if (!in.readLine().equalsIgnoreCase("press 1"))
 		{
 			System.out.println("Wrong button. You need to select the module again. ");
-			press();
+			press2();
 			return;
 		}
 		

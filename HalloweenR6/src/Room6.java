@@ -66,13 +66,13 @@ public class Room6
 		Scanner in = new Scanner(System.in);
 		System.out.print("\n\nPassword: ");
 		String input = in.nextLine();
-		if (input.equalsIgnoreCase("HARD"))
+		if (input.equalsIgnoreCase("31038"))
 		{
 				accessGranted();
 				Thread.sleep(1000);
 				hiddenMessage();
 		}
-		else if (input.equalsIgnoreCase("EASY"))
+		else if (input.equalsIgnoreCase("12581"))
 			{
 				accessGranted();
 				wait(2000);
@@ -150,7 +150,7 @@ public class Room6
 		for (int trials=1;trials<=5;trials++)
 		{
 			System.out.print("Password: ");
-			if (in.next().equalsIgnoreCase("2021"))
+			if (in.next().equalsIgnoreCase("31038"))
 			{
 				hiddenMessage();
 				break;

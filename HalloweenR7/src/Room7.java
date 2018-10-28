@@ -12,9 +12,7 @@ public class Room7
 		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 		
 		
-		System.out.println("Start playing by pressing enter. ");
-		in.nextLine();
-		new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+	
 		
 		printw(
 				"SIMULATION INFO TRANSPORTING AREA\r\n" + 

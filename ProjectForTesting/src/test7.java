@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 public class test7 {
 
 	public static void main(String[] args) throws Exception {
-		String processName = "ddd.exe";
+		String processName = "room7.exe";
 
 		 //System.out.print(isProcessRunning(processName));
 
