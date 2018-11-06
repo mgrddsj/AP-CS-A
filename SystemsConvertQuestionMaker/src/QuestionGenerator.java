@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Random;
 import java.util.Scanner;
 
 public class QuestionGenerator {
@@ -24,7 +25,24 @@ public class QuestionGenerator {
 		PrintStream answers = new PrintStream(new File("Answers.txt"));
 		for (int i=1;i<=qCount;i++)
 		{
+			int initNum = random(initSys,digits);
 			
 		}
+	}
+	
+	public static int random(int sys,int digits)
+	{
+		String num = "";
+		Random rand = new Random();
+		for (int i=1;i<=digits;i++)
+		{
+			num += rand.nextInt(sys-1);
+		}
+		return Integer.parseInt(num);
+	}
+	
+	public static String results(int num)
+	{
+		
 	}
 }
