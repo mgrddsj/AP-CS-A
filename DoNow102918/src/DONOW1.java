@@ -33,7 +33,7 @@ public class DONOW1
 		Scanner in = new Scanner(System.in);
 		int score = 0;
 		int dice = 0;
-		System.out.println("Player " + player + ": ");
+		System.out.println("\nPlayer " + player + ": ");
 		while (dice!=1)
 		{
 			System.out.print("Roll a die? ");
