@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class QuestionGenerator 
 {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws FileNotFoundException 
 	{
 		Scanner in = new Scanner(System.in); 
 		System.out.println("From what system? ");
@@ -16,6 +16,7 @@ public class QuestionGenerator
 		int digits = in.nextInt();
 		System.out.println("How many questions? ");
 		int qCount = in.nextInt();
+		process(initialSystem,destSystem,digits,qCount);
 		
 	}
 
@@ -30,8 +31,8 @@ public class QuestionGenerator
 		for (int i=1;i<=qCount;i++)
 		{
 			String initNum = random(initSys,digits);
-			String resultNum = results(initSys,destSys,initNum);
-			questions.println("Convert:\tbase"+initSys+" "+random(initSys,digits)+"\tto\tbase"+destSys+": ");
+			questions.println("Convert:\tbase"+initSys+" "+initNum+"\tto\tbase"+destSys+": ");
+			answers.println(""+Integer.toString(Integer.parseInt(initNum, initSys), destSys));
 		}
 	}
 	
@@ -129,11 +130,14 @@ public class QuestionGenerator
 				}
 			}
 		}
+		System.out.println(num);
 		return num;
 	}
 	
 	public static String results(int initSys,int destSys,String num)
 	{
-		return Integer.toString(Integer.parseInt(num, initSys), destSys);
+		System.out.println(Integer.toString(Integer.parseInt(num, initSys), destSys));
+		
+		return ""+Integer.toString(Integer.parseInt(num, initSys), destSys);
 	}
 }
