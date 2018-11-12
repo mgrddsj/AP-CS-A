@@ -17,7 +17,7 @@ public class QuestionGenerator
 		System.out.println("How many questions? ");
 		int qCount = in.nextInt();
 		process(initialSystem,destSystem,digits,qCount);
-		
+		in.close();
 	}
 
 	public static void process(int initSys,int destSys,int digits,int qCount) throws FileNotFoundException
@@ -42,7 +42,7 @@ public class QuestionGenerator
 		Random rand = new Random();
 		for (int i=1;i<=digits;i++)
 		{
-			int randNum = rand.nextInt(sys-1);
+			int randNum = rand.nextInt(sys);
 			if (randNum<=9)
 				num += randNum;
 			else 
@@ -77,51 +77,54 @@ public class QuestionGenerator
 					num += "i";
 					break;
 				case 19:
+					num += "j";
+					break;
+				case 20:
 					num += "k";
 					break;
-				case 20: 
+				case 21: 
 					num += "l";
 					break;
-				case 21: 
+				case 22: 
 					num += "m";
 					break;
-				case 22:
+				case 23:
 					num += "n";
 					break;
-				case 23: 
+				case 24: 
 					num += "o";
 					break;
-				case 24: 
+				case 25: 
 					num += "p";
 					break;
-				case 25:
+				case 26:
 					num += "q";
 					break;
-				case 26:
+				case 27:
 					num += "r";
 					break;
-				case 27: 
+				case 28: 
 					num += "s";
 					break;
-				case 28: 
+				case 29: 
 					num += "t";
 					break;
-				case 29:
+				case 30:
 					num += "u";
 					break;
-				case 30:
+				case 31:
 					num += "v";
 					break;
-				case 31:
+				case 32:
 					num += "w";
 					break;
-				case 32: 
+				case 33: 
 					num += "x";
 					break;
-				case 33:
+				case 34:
 					num += "y";
 					break;
-				case 34:
+				case 35:
 					num += "z";
 					break;
 				default: 
