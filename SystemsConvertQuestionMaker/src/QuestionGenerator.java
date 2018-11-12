@@ -31,7 +31,7 @@ public class QuestionGenerator
 		for (int i=1;i<=qCount;i++)
 		{
 			String initNum = random(initSys,digits);
-			questions.println("Convert:\tbase"+initSys+" "+random(initSys,digits)+"\tto\tbase"+destSys+": ");
+			questions.println("Convert:\tbase"+initSys+" "+initNum+"\tto\tbase"+destSys+": ");
 			answers.println(""+Integer.toString(Integer.parseInt(initNum, initSys), destSys));
 		}
 	}
