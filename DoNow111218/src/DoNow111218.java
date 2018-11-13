@@ -4,7 +4,7 @@ public class DoNow111218
 
 	public static void main(String[] args) 
 	{
-		System.out.println(caesarCipher("Computer science is awesome",3));
+		System.out.println(caesarCipher("zzzomputer science is awesome",3));
 	}
 
 	public static int countChar(String text,char keyChar)
