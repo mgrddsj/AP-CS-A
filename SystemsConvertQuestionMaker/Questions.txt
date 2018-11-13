@@ -1,0 +1,5 @@
+Convert:	base25 8gljg	to	base16: 
+Convert:	base25 d7o7m	to	base16: 
+Convert:	base25 0h0hg	to	base16: 
+Convert:	base25 gie3k	to	base16: 
+Convert:	base25 1h276	to	base16: 
