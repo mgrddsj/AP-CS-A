@@ -1,10 +1,35 @@
+import java.util.Scanner;
 
 public class DoNow111218 
 {
 
 	public static void main(String[] args) 
 	{
+<<<<<<< Upstream, based on origin/master
 		System.out.println(caesarCipher("zzzomputer science is awesome",3));
+=======
+		System.out.println(caesarCipher("Computer science is awesome xxxyyyzzz",5));
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print("Your secret message: ");
+		String text = in.nextLine();
+		System.out.print("Your secret key: ");
+		int key = in.nextInt();
+		String encrypted = "";
+		for (int i=0;i<=text.length()-2;i++)
+		{
+			if (text.charAt(i)==' ')
+				encrypted += (char)' ';
+			else 
+				encrypted += (char)(text.charAt(i)+key);
+		}
+		encrypted.replace("{", "a");
+		encrypted.replace("|", "b");
+		encrypted.replace("}", "c");
+		encrypted.replace("~", "d");
+		System.out.println("Your encoded message: " + encrypted);
+		
+>>>>>>> c323187 IDK why cannot commit
 	}
 
 	public static int countChar(String text,char keyChar)
@@ -36,7 +61,16 @@ public class DoNow111218
 	{
 		String encrypted = "";
 		for (int i=0;i<=text.length()-2;i++)
-			encrypted += (char)(text.charAt(i)+key);
+		{
+			if (text.charAt(i)==' ')
+				encrypted += (char)' ';
+			else 
+				encrypted += (char)(text.charAt(i)+key);
+		}
+		encrypted.replace("{", "a");
+		encrypted.replace("|", "b");
+		encrypted.replace("}", "c");
+		encrypted.replace("~", "d");
 		return encrypted;
 	}
 }
