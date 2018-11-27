@@ -25,11 +25,11 @@ public class EdmodoHomework
 		}
 		
 		System.out.println("Answer to be graded? ");
-		String answerInput = in.nextLine();
+		String input = in.next();
 		
 		for (int i=0;i<questionCount;i++)
 		{
-			if (answerInput.charAt(i) == answer[i])
+			if (input.charAt(i) == answer[i])
 				correctCount++;
 		}
 		
