@@ -9,7 +9,6 @@ public class DoNow112718
 		reverser(list);
 		System.out.println(Arrays.toString(list));
 		shifter(list,2);
-		System.out.println(Arrays.toString(list));
 
 	}
 
@@ -25,6 +24,22 @@ public class DoNow112718
 	
 	public static void shifter(int[] list,int shift)
 	{
+		int[] newList = new int[list.length];
+		for (int i=0;i<list.length;i++)
+		{
+			if (i-shift < 0)
+			{
+				newList[i] = list[list.length-1-i];
+			}
+			else 
+			{
+				newList[i] = list[i-shift];
+			}
+		}
+		System.out.println(Arrays.toString(newList));
+		
+		
+		/*
 		int[] temp = new int[shift];
 		for (int i=0;i<=shift;i++)
 		{
@@ -35,6 +50,6 @@ public class DoNow112718
 		{
 			list[i-shift]=list[i];
 		}
-		
+		*/
 	}
 }
