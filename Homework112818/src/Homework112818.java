@@ -7,7 +7,7 @@ public class Homework112818
 
 	public static void main(String[] args) 
 	{
-		problem6();
+		
 	}
 
 	public static void problem4(int min,int max)
@@ -36,7 +36,31 @@ public class Homework112818
 		//[3, 3, 0, 0, 6, 9, 0, -18]
 	}
 	
-	public static void problem10()
+	public static int problem10_average(int[] list)
+	{
+		int max = Integer.MIN_VALUE;
+		for (int i=0;i<list.length;i++)
+			if (list[i]>max)
+				max = list[i];
+		return max;
+	}
+	
+	public static void problem14()
+	{
+		//[3, 24, 8, -5, 6, 1]
+	}
+	
+	public static void problem19()
+	{
+		/*
+		 * 2 [0, 0, 1, 0]
+		 * 1 [0, 0, 1, 0]
+		 * 3 [0, 0, 1, 1]
+		 * 2 [0, 0, 1, 1]
+		 */
+	}
+	
+	public static void problem20()
 	{
 		
 	}
