@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DoNow112918 
@@ -15,20 +16,22 @@ public class DoNow112918
 		String text = in.nextLine();
 		
 		int spaces = 0;
-		for (int i=0;i<text.length()-1;i++)
+		for (int i=0;i<text.length();i++)
 		{
 			if (text.charAt(i) == ' ')
 				spaces++;
 		}
 		
-		char[] firstLetters = new char[spaces];
-		int counter = 0;
+		String[] words = new String[spaces];
+		int counter = 1;
 		
-		for (int i=0;i<text.length()-1;i++)
+		words[0] = text.substring(0, text.indexOf(" "));
+		
+		for (int i=0;i<text.length()-2;i++)
 		{
 			if (text.charAt(i) == ' ')
 			{
-				firstLetters[counter] = text.charAt(i+1);
+				words[counter] = text.substring(i, (text.substring(i+1)).indexOf(" ")+i+1);
 				counter++;
 			}
 		}
@@ -41,5 +44,7 @@ public class DoNow112918
 			System.out.println("Questioning sentence! ");
 		else 
 			System.out.println("You don't know how to add punctuation marks? ");
+		
+		System.out.println(Arrays.toString(words));
 	}
 }
