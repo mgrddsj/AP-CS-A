@@ -7,7 +7,7 @@ public class Homework112818
 
 	public static void main(String[] args) 
 	{
-		
+		problem4(-6,38);
 	}
 
 	public static void problem4(int min,int max)
@@ -22,8 +22,9 @@ public class Homework112818
 		int[] list = new int[arrLength];
 		for (int i=0;i<arrLength;i++)
 		{
-			list[i] = min+=i*2;
+			list[i] = min+i*2+1;
 		}
+		System.out.println(Arrays.toString(list));
 	}
 	
 	public static void problem5()
