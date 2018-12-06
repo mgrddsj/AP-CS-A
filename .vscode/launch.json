@@ -2,6 +2,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DoNow120618",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "DoNow120618",
+            "args": "",
+            "projectName": "DoNow120618"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PracticePG524Q13",
             "request": "launch",
             "cwd": "${workspaceFolder}",
