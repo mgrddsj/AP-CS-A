@@ -8,6 +8,7 @@ public class Contest1_2016_2017
 		Scanner in = new Scanner(System.in);
 		String input = in.nextLine();
 		System.out.println(agram(input));
+		in.close();
 	}
 
 	public static String agram(String input)
@@ -60,6 +61,7 @@ public class Contest1_2016_2017
 			}
 		}
 
+		boolean isNumber = false;
 		if (!hasSameSuit)
 		{
 			for (int i=1;i<6;i++)
@@ -68,11 +70,11 @@ public class Contest1_2016_2017
 					{
 						card = 'A';
 						suit = list[i].charAt(1);
+						isNumber = true;
 						break;
 					}
 			}
 			
-			boolean isNumber = false;
 			for (int c=9;c>=2;c--)
 			{
 				for (int i=1;i<6;i++)
