@@ -71,12 +71,13 @@ public class Contest1_2016_2017
 						break;
 					}
 			}
+			
 			boolean isNumber = false;
-			for (int c=2;c<=9;c++)
+			for (int c=9;c>=2;c--)
 			{
 				for (int i=1;i<6;i++)
 				{
-					if (list[i].charAt(0)==c)
+					if (list[i].charAt(0)==("" + c).charAt(0))
 					{
 						card = list[i].charAt(0);
 						suit = list[i].charAt(1);
@@ -85,6 +86,58 @@ public class Contest1_2016_2017
 				}
 			}
 			
+			if (!isNumber)
+			{
+				for (int i=1;i<6;i++)
+				{
+					if (list[i].charAt(0)=='T')
+					{
+						card = list[i].charAt(0);
+						suit = list[i].charAt(1);
+						isNumber = true;
+						break;
+					}
+				}
+			}
+			if (!isNumber)
+			{
+				for (int i=1;i<6;i++)
+				{
+					if (list[i].charAt(0)=='J')
+					{
+						card = list[i].charAt(0);
+						suit = list[i].charAt(1);
+						isNumber = true;
+						break;
+					}
+				}
+			}
+			if (!isNumber)
+			{
+				for (int i=1;i<6;i++)
+				{
+					if (list[i].charAt(0)=='Q')
+					{
+						card = list[i].charAt(0);
+						suit = list[i].charAt(1);
+						isNumber = true;
+						break;
+					}
+				}
+			}
+			if (!isNumber)
+			{
+				for (int i=1;i<6;i++)
+				{
+					if (list[i].charAt(0)=='K')
+					{
+						card = list[i].charAt(0);
+						suit = list[i].charAt(1);
+						isNumber = true;
+						break;
+					}
+				}
+			}
 		}
 		
 		return "" + card + suit;
