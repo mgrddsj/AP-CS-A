@@ -62,22 +62,29 @@ public class Contest1_2016_2017
 
 		if (!hasSameSuit)
 		{
-			char min = list[0].charAt(0);
 			for (int i=1;i<6;i++)
 			{
 				if (list[i].charAt(0)=='A')
+					{
+						card = 'A';
+						suit = list[i].charAt(1);
+						break;
+					}
+			}
+			boolean isNumber = false;
+			for (int c=2;c<=9;c++)
+			{
+				for (int i=1;i<6;i++)
 				{
-					card = 'A';
-					suit = list[i].charAt(1);
-					break;
-				}
-				else if (compareGetLarge(list[i].charAt(0), min, true)==min)
-				{
-					card = list[i].charAt(0);
-					suit = list[i].charAt(1);
-					min = list[i].charAt(0);
+					if (list[i].charAt(0)==c)
+					{
+						card = list[i].charAt(0);
+						suit = list[i].charAt(1);
+						isNumber = true;
+					}
 				}
 			}
+			
 		}
 		
 		return "" + card + suit;
