@@ -18,9 +18,9 @@ public class Contest1_2016_2017
 		boolean hasSameSuit = false;
 		char suit = 'a';
 		char card = '0';
+		boolean hasHigherRankCard = false;
 		for (int i=1;i<6;i++)
 		{
-			
 			if (list[i].charAt(1) == list[0].charAt(1))
 			{
 				hasSameSuit = true;
@@ -31,13 +31,24 @@ public class Contest1_2016_2017
 					if (compareGetLarge(list[i].charAt(0), list[0].charAt(0), true) == list[i].charAt(0))
 					{
 						card = list[i].charAt(0);
+						hasHigherRankCard = true;
 					}
 				}
 				else 
 				{
-					if (compareGetLarge(card, list[i].charAt(0), false) == card)
+					if (hasHigherRankCard)
 					{
-						card = list[i].charAt(0);
+						if (compareGetLarge(card, list[i].charAt(0), true) == card && compareGetLarge(list[i].charAt(0), list[0].charAt(0), true) == list[i].charAt(0))
+						{
+							card = list[i].charAt(0);
+						}
+					}
+					else 
+					{
+						if (compareGetLarge(card, list[i].charAt(0), true) == card)
+						{
+							card = list[i].charAt(0);
+						}
 					}
 				}
 			}
@@ -192,3 +203,16 @@ public class Contest1_2016_2017
 		}
 	}
 }
+
+/*
+ * 5D, 2D, 6H, 9D, TD, 6S
+ * TC, AC, KC, QH, JS, TD
+ * 3D, 4H, 5C, 6S, 2D, 7H
+ * KS, TH, QC, 7H, 9H, 3H
+ * AC, AD, KH, JS, KS, QS
+ * 6H, 2H, 4C, 7H, 9D, 6S
+ * AC, 2S, 5D, 6H, JS, 3S
+ * KD, 4S, 4C, 4S, 4D, KS
+ * QS, 4D, 7C, 8D, TH, 2C
+ * TC, KC, 5H, AD, 7C, TS
+ */ 
