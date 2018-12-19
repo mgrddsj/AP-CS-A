@@ -3,7 +3,7 @@
  * Usage: Please place a file named "input.txt" with input in the project folder of the program. 
  * 				Each input should be separated in lines. Output will be in the console. 
  * 
- * @Author: Jesse Xu
+ * @Author: Jesse Jiaxi Xu
  * @Date: 2018/12/15
  * 
  */
