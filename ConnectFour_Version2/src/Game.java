@@ -251,11 +251,11 @@ public class Game
 				}
 				if (board[column][row] == 1)
 				{
-					System.out.print("🔶");
+					System.out.print(" Y ");
 				}
 				else if (board[column][row] == 2)
 				{
-					System.out.print("🔴");
+					System.out.print(" R ");
 				}
 				else 
 				{
@@ -324,9 +324,9 @@ public class Game
     	
     	//Check top left to bottom right
     	
-    	for (int row=0;row<=2;row++)
+    	for (int row=0;row<=5;row++)
     	{
-    		for (int column=0;column<=3;column++)
+    		for (int column=0;column<=5;column++)
     		{
     			int temp = board[column][row];
     			if (temp==0)
@@ -355,9 +355,9 @@ public class Game
     	
     	//Check top right to bottom left
     	
-    	for (int row=0;row<=2;row++)
+    	for (int row=0;row<=5;row++)
     	{
-    		for (int column=3;column<=6;column++)
+    		for (int column=3;column<=8;column++)
     		{
     			int temp = board[column][row];
     			if (temp==0)
