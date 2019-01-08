@@ -8,12 +8,13 @@ public class Game
 	
 	public static void main(String[] args) 
 	{
+		/*
 		Scanner in = new Scanner(System.in);
 		System.out.println("What game mode would you like? (1 for PVP, 2 for battle against computer). ");
 		int gm = in.nextInt();
 
 		if (gm == 2)
-		{	
+		{
 			//pVc();
 		}
 		else 
@@ -21,6 +22,8 @@ public class Game
 			pVp();
 		}
 		in.close();
+		*/
+		pVp();//PVC not updated yet. 
 	}
 
 	public static void pVp()
@@ -150,7 +153,7 @@ public class Game
 	{
 		Scanner in = new Scanner(System.in);
 		Random rand = new Random();
-		int[][] board = new int[7][6]; //[column][row]
+		int[][] board = new int[9][9]; //[column][row]
 		int player = 1;
 		System.out.println("Silly computer joined the game! ");
 		
@@ -251,11 +254,11 @@ public class Game
 				}
 				if (board[column][row] == 1)
 				{
-					System.out.print(" Y ");
+					System.out.print("🔶");
 				}
 				else if (board[column][row] == 2)
 				{
-					System.out.print(" R ");
+					System.out.print("🔴");
 				}
 				else 
 				{
@@ -266,7 +269,7 @@ public class Game
 			}
 			System.out.println();
 			if (row != 8)
-				System.out.println("---------------------------------");
+				System.out.println("----------------------------------------");
 		}
     	System.out.println("    -4| -3| -2| -1| 0 | 1 | 2 | 3 | 4 ");
     }
