@@ -37,14 +37,14 @@ public class Game
 		while (!wins)
 		{
 			System.out.println("Player " + player + "'s turn: ");
-			/* Bomb, not used. 
+			// Bomb 
 			boolean bomb = false;
 			if (rand.nextInt(15) == 2)
 			{
 				System.out.println("Lucky you! You've got a bomb. It will destroy 3x3 area around it! ");
 				bomb = true;
 			}
-			*/
+			
 			System.out.print("Which column? ");
 			int columnIn = in.nextInt()+4;
 			System.out.print("Which Row? ");
@@ -56,34 +56,31 @@ public class Game
 				if (board[columnIn][rowIn] == 0)
 				{
 					occupied = false;
-					board[columnIn][rowIn] = player;
-					/* Bomb code. Not used. 
+					//board[columnIn][rowIn] = player;
+					
+					//Bomb code. 
 					if (bomb)
 					{
-						if (rowIn+1<9)
-							board[columnIn][rowIn+1] = 0;
-						if (columnIn-2>0)
+						for (int c=-1;c<=1;c++)
 						{
-							if (rowIn-1>=0)
-								board[columnIn-1][rowIn-1] = 0;
-							board[columnIn-2][rowIn] = 0;
-							if (rowIn+1<9)
-								board[columnIn-1][rowIn+1] = 0;
-						}
-						if (columnIn<9)
-						{
-							if (rowIn-1>=0)
-								board[columnIn][rowIn-1] = 0;
-							board[columnIn][rowIn] = 0;
-							if (rowIn+1<6)
-								board[columnIn][rowIn+1] = 0;
+							for (int r=-1;r<=1;r++)
+							{
+								try
+								{
+									board[columnIn+c][rowIn+r] = 0;
+								}
+								catch (IndexOutOfBoundsException exception)
+								{
+
+								}
+							}
 						}
 					}
 					else
 					{
 						board[columnIn][rowIn] = player;
 					}
-					*/
+					
 				}
 				else 
 				{
