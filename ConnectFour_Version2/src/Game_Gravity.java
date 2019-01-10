@@ -82,6 +82,7 @@ public class Game_Gravity
 								if (board[c][r] != 0 && board[c][r-1] == 0)
 								{
 									board[c][r-1] = board[c][r];
+									board[c][r] = 0;
 								}
 							}
 						}
@@ -91,19 +92,20 @@ public class Game_Gravity
 				{
 					for (int i=0;i<10;i++)
 					{
-						for (int c=0;c<9;c++)
+						for (int c=0;c<8;c++)
 						{
-							for (int r=9;r>=0;r--)
+							for (int r=7;r>=0;r--)
 							{
 								if (board[c][r] != 0 && board[c][r+1] == 0)
 								{
 									board[c][r+1] = board[c][r];
+									board[c][r] = 0;
 								}
 							}
 						}
 					}
 				}
-				else if (direction == 'E')
+				else if (direction == 'W')
 				{
 					for (int i=0;i<10;i++)
 					{
@@ -114,6 +116,7 @@ public class Game_Gravity
 								if (board[c][r] != 0 && board[c-1][r] == 0)
 								{
 									board[c-1][r] = board[c][r];
+									board[c][r] = 0;
 								}
 							}
 						}
@@ -125,11 +128,12 @@ public class Game_Gravity
 					{
 						for (int r=0;r<9;r++)
 						{
-							for (int c=8;c>=0;c--)
+							for (int c=7;c>=0;c--)
 							{
-								if (board[c][r] != 0 && board[c-1][r] == 0)
+								if (board[c][r] != 0 && board[c+1][r] == 0)
 								{
-									board[c-1][r] = board[c][r];
+									board[c+1][r] = board[c][r];
+									board[c][r] = 0;
 								}
 							}
 						}
