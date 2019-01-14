@@ -7,7 +7,6 @@ public class Account
     
     public Account(String initOwner,double initValue)
     {
-        BigDecimal value = new BigDecimal(initValue);
         value = initValue;
         owner = initOwner;
     }
