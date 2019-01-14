@@ -1,3 +1,5 @@
+import java.awt.Point;
+
 //PG.578
 public class SelfCheckProblems 
 {
@@ -73,6 +75,43 @@ public class SelfCheckProblems
 		 * 	Accessor: length, exists, etc. 
 		 */
 	}
+
+	public static void problem9()
+	{
+		// D
+	}
+
+	public double problem10_distance(Point p1, Point p2)
+	{
+		return Math.sqrt(Math.pow((p1.x-p2.x), 2) + Math.pow(p1.y-p2.y, 2));
+	}
+
+	public static void problem11()
+	{
+		//See class "Name"
+	}
+
+	public static void problem12()
+	{
+		/*
+		 * Write a client program / Write some accessors.
+		 */
+	}
+
+	public static void problem13()
+	{
+		//D
+	}
+
+	public String problem14_toString(Point p)
+	{
+		return "java.awt.Point[ x=" + p.x + ",y=" + p.y + "] ";
+	}
+
+	public static void problem15()
+	{
+		//See class "Name"
+	}
 }
 
 class Name
@@ -80,4 +119,20 @@ class Name
 	private String firstName;
 	private String lastName;
 	private char middleInitial;
+
+	//problem 11
+	public String getNormalOrder()
+	{
+		return firstName + " " + middleInitial + ". " + lastName;
+	}
+
+	public String getReverseOrder()
+	{
+		return lastName + " " + firstName + " " + middleInitial + ". ";
+	}
+
+	public String toString()
+	{
+		return firstName + " " + middleInitial + ". " + lastName;
+	}
 }
