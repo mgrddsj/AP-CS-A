@@ -5,9 +5,8 @@ public class DoNow111218
 
 	public static void main(String[] args) 
 	{
-<<<<<<< Upstream, based on origin/master
+		/*
 		System.out.println(caesarCipher("zzzomputer science is awesome",3));
-=======
 		System.out.println(caesarCipher("Computer science is awesome xxxyyyzzz",5));
 		
 		Scanner in = new Scanner(System.in);
@@ -28,8 +27,7 @@ public class DoNow111218
 		encrypted.replace("}", "c");
 		encrypted.replace("~", "d");
 		System.out.println("Your encoded message: " + encrypted);
-		
->>>>>>> c323187 IDK why cannot commit
+		*/
 	}
 
 	public static int countChar(String text,char keyChar)
