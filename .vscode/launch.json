@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DoNow",
+            "request": "launch",
+            "mainClass": "DoNow"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DoNow120618",
             "request": "launch",
             "cwd": "${workspaceFolder}",
