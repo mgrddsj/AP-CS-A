@@ -12,6 +12,10 @@ public class StudentClient
 		System.out.println();
 		Jesse.newGPA(4);
 		System.out.println(Jesse.toString());
+		
+		System.out.println();
+		Student Cindy = new Student("Cindy Ye",11848);
+		System.out.println(Cindy.toString());
 	}
 
 }
