@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Student {
 
@@ -18,6 +19,15 @@ public class Student {
     {
         stuName = inputName;
         stuID = inputID;
+        stuGPA = 1.0;
+        isBoarder = false;
+    }
+
+    public Student(String inputName)
+    {
+        Random rand = new Random();
+        stuName = inputName;
+        stuID = rand.nextInt(40000) + 10000;
         stuGPA = 1.0;
         isBoarder = false;
     }
