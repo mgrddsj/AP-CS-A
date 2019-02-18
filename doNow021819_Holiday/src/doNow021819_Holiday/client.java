@@ -7,12 +7,20 @@ public class client {
 
 	public static void main(String[] args)
 	{
+		holiday newYear = new holiday("New Year");
 
+		Random rand = new Random();
+		while(rand.nextInt(10) != 1)
+		{
+			getRedPacket(rand.nextDouble, rand.nextInt(1000));
+		}
 	}
 
-	public static void getRedPacket(String where, double moneyGot)
+	public static void getRedPacket(double distFromHome, double moneyGot)
 	{
-
+		holiday.transferByBicycle(distFromHome);
+		holiday.budgetPlus(moneyGot);
+		happinessIncrease(moneyGot);
 	}
 
 	private void happinessIncrease(double moneyGot)

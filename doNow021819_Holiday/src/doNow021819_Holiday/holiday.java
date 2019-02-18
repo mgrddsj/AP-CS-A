@@ -16,4 +16,19 @@ public class holiday
 		
 	}
 
+	public transferByBicycle(double distance)
+	{
+		transportation eBike = new transportation(1, "ebike");
+		eBike.takeARide(distance, this);
+	}
+
+	public budgetPlus(double value)
+	{
+		redPacketReceived += value;
+	}
+
+	public budgetMinus(double value)
+	{
+		redPacketReceived -= value;
+	}
 }
