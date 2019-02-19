@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - client",
+            "request": "launch",
+            "mainClass": "doNow021819_Holiday.client",
+            "projectName": "doNow021819_Holiday"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test19",
             "request": "launch",
             "mainClass": "Test19",
