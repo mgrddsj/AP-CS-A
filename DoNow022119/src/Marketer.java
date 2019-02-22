@@ -4,7 +4,7 @@ public class Marketer extends Employee
     public boolean hasGreatIdeas;
     private int numOfIdeas;
 
-    public Employee()
+    public Marketer()
     {
         hasGreatIdeas = true;
         numOfIdeas = 0;
@@ -21,4 +21,15 @@ public class Marketer extends Employee
         System.out.println("Works great! ");
     }
 
+    private void getSomeIdeas()
+    {
+        System.out.println("Let me see some designs on Pinterest. ");
+    }
+
+    //Try to call private behavior of Employee
+    private void callPrivateMethod()
+    {
+    	//super.addSickDays();	Not able to call. 
+    }
+    
 }

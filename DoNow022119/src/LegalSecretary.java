@@ -4,7 +4,7 @@ public class LegalSecretary extends Secretary
     public String efficiency;
     private String efficiencyInReality;
 
-    public Secretary()
+    public LegalSecretary()
     {
         efficiency = "fast";
         efficiencyInReality = "slow";
@@ -20,9 +20,15 @@ public class LegalSecretary extends Secretary
         System.out.println("Filing... ");
     }
 
-    public void increaseEfficiency()
+    private void increaseEfficiency()
     {
-        System.out.println("Let me finish watching this YouTube video... ");
+        System.out.println("Let me finish watching this YouTube video first... ");
+    }
+
+    private void accessPublicField()
+    {
+    	//There's a spring board in Secretary class. 
+        System.out.println(super.springBoard());
     }
 
 }

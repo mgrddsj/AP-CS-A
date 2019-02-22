@@ -4,7 +4,7 @@ public class Secretary extends Employee
 	public String speed;
 	private String typos;
 
-	public Employee()
+	public Secretary()
 	{
 		speed = "fast";
 		typos = "A lot";
@@ -18,6 +18,17 @@ public class Secretary extends Employee
 	public void organizeDictation()
 	{
 		System.out.println("Organizing... ");
+	}
+
+	private void makeFewerTypos()
+	{
+		System.out.println("It's not a big deal. ");
+	}
+
+	public double springBoard()
+	{
+		super.getSalary();// Use super to access behavior. 
+		return super.salary;
 	}
 
 }

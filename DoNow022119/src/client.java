@@ -45,6 +45,21 @@ public class client
 		System.out.println(marketer.getVacationForm());
 		marketer.advertise();
 		System.out.println();
+
+		//Trying to access private field of Employee
+		// System.out.println(worker.workHours);	The field Employee.workHours is not visible
+
+		//Trying to access public field of Employee
+		System.out.println(worker.salary);
+
+		//Trying to call private behavior of Employee from Marketer class. 
+		// worker.addSickDays();		The method addSickDays() from the type Employee is not visible
+
+		//Call public and private behaviors of LegalSecretary class
+		legalSecretary.getSalary();
+		// legalSecretary.increaseEfficiency();		The method increaseEfficiency() from the type LegalSecretary is not visible
+
+		
 	}
 
 }

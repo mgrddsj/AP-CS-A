@@ -6,7 +6,12 @@ public class Employee
 	private int workHours;
 	private int sickDays;
 
-	pulic Employee(String inputName, int inputSickDays)
+	public Employee()
+	{
+		
+	}
+
+	public Employee(String inputName, int inputSickDays)
 	{
 		name = inputName;
 		salary = 40000.0;

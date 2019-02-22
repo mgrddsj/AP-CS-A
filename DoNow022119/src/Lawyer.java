@@ -4,8 +4,9 @@ public class Lawyer extends Employee
 	public boolean isEvil;
 	private boolean isEvilInReality;
 
-	public Employee()
+	public Lawyer()
 	{
+		super(); // Try using super(). 
 		isEvil = false;
 		isEvilInReality = true;
 	}
@@ -29,5 +30,18 @@ public class Lawyer extends Employee
 	{
 		System.out.println("I'll consider about it. ");
 	}
+
+	private void addSickDays()
+	{
+		System.out.println("Acess denied. ");
+	}
+
+	//Trying to access private field of Employee
+	private void accessPrivateField()
+	{
+		// System.out.println(super.workHours);		The field Employee.workHours is not visible
+	}
+
+
 	
 }
