@@ -1,6 +1,18 @@
 
 public class Employee 
 {
+	public String name;
+	public double salary;
+	private int workHours;
+	private int sickDays;
+
+	pulic Employee(String inputName, int inputSickDays)
+	{
+		name = inputName;
+		salary = 40000.0;
+		workHours = 40;
+		sickDays = inputSickDays;
+	}
 	
 	public int getHours() 
 	{
@@ -20,6 +32,11 @@ public class Employee
 	public String getVacationForm() 
 	{
 		return "yellow";     // use the yellow form
+	}
+
+	private void addSickDays()
+	{
+		sickDays++;
 	}
 	
 }

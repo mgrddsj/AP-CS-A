@@ -1,6 +1,14 @@
 
 public class LegalSecretary extends Secretary
 {
+    public String efficiency;
+    private String efficiencyInReality;
+
+    public Secretary()
+    {
+        efficiency = "fast";
+        efficiencyInReality = "slow";
+    }
 
     public double getSalary()
     {
@@ -10,6 +18,11 @@ public class LegalSecretary extends Secretary
     public void fileLegalBriefs()
     {
         System.out.println("Filing... ");
+    }
+
+    public void increaseEfficiency()
+    {
+        System.out.println("Let me finish watching this YouTube video... ");
     }
 
 }

@@ -1,6 +1,14 @@
 
 public class Marketer extends Employee
 {
+    public boolean hasGreatIdeas;
+    private int numOfIdeas;
+
+    public Employee()
+    {
+        hasGreatIdeas = true;
+        numOfIdeas = 0;
+    }
 
     public double getSalary()
     {
