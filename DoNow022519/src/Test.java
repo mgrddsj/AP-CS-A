@@ -13,7 +13,7 @@ public class Test
 		System.out.println(employee.getVacationForm());
 		System.out.println(lawyer.getVacationForm());
 //		employee.sue("Someone");
-		lawyer.sue("Someone");
+		((Lawyer) lawyer).sue("Someone");
 
 	}
 
