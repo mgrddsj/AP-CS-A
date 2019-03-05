@@ -15,7 +15,7 @@ public class Student
 
     public boolean equals(Object _stu)
     {
-        if (_stu.getClass(). == GPA)
+        if (((Student)_stu).getGPA() == GPA)
             return true;
         return false;
     }
