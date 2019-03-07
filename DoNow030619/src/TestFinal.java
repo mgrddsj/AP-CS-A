@@ -15,7 +15,7 @@ public class TestFinal
 
 }
 
-final class TestFinal
+final class TestFinal1
 {
 	final public int a = 1;
 
