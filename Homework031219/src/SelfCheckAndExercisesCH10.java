@@ -178,4 +178,9 @@ public class SelfCheckAndExercisesCH10
 		return strings;
 	}
 
+	public static ArrayList<String> removeEvenLength(ArrayList<String> strings)
+	{
+		return strings;
+	}
+
 }
