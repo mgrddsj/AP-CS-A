@@ -199,5 +199,30 @@ public class SelfCheckAndExercisesCH10
 	    }
 	    return strings;
 	}
+	
+	public static ArrayList<Integer> scaleByK(ArrayList<Integer> ints)
+	{
+	    ArrayList<Integer> temp = new ArrayList<>();
+	    
+	    for (int i=0; i<ints.size(); i++)
+	    {
+	        if (ints.get(i) > 0)
+	        {
+	            for (int k=0; k<ints.get(i); k++)
+	            {
+	                temp.add(ints.get(i));   
+	            }
+	        }
+	    }
+	    
+	    //Replace the original one.
+	    ints.clear();
+	    for (int i=0; i<temp.size(); i++)
+	    {
+	        ints.add(temp.get(i));   
+	    }
+	    
+	    return temp;
+	}
 
 }
