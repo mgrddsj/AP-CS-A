@@ -180,7 +180,16 @@ public class SelfCheckAndExercisesCH10
 
 	public static ArrayList<String> removeEvenLength(ArrayList<String> strings)
 	{
+		for (int i=0; i<strings.size(); i++)
+		{
+			while (strings.get(i).length() %2 == 0)
+			{
+			       strings.remove(i);
+			}
+		}
 		return strings;
 	}
+	
+	
 
 }
