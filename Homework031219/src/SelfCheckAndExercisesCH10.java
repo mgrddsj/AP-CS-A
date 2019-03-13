@@ -190,6 +190,14 @@ public class SelfCheckAndExercisesCH10
 		return strings;
 	}
 	
-	
+	public static ArrayList<String> doubleList(ArrayList<String> strings)
+	{
+	    int stringsSize = strings.size();
+	    for (int i=0; i<stringsSize; i++)
+	    {
+	        strings.add(i*2, strings.get(i*2));   
+	    }
+	    return strings;
+	}
 
 }
