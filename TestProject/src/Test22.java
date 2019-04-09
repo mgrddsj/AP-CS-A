@@ -6,20 +6,49 @@ public class Test22
 
 	public static void main(String[] args) 
 	{
-//		 stringRecur("ssssssssssssssssssssssssssssssssssssss");
-		// int[] arr1 = {0,6,0,4,0,0,2};
-		// test(arr1);
-//		System.out.println(nested(1, 2));
-//		kooky(1);
-//		StringMania mania = new StringMania("kilometer");
-//		System.out.print(mania.stringGymnastics(10) + " ");
-//		System.out.print(mania.stringGymnastics("me", 3) + " ");
-//		System.out.println(mania.stringGymnastics(5,8));
-		ArrayList<Integer> nums = new ArrayList<Integer>();
-		nums.add(400);
-		nums.add(300);
-		nums.add(200);
-		System.out.println(processNums(nums));
+		ArrayList<Integer> numsList = new ArrayList<Integer>();
+		numsList.add(10);
+		numsList.add(30);
+		numsList.add(44);
+		numsList.add(26);
+		numsList.add(60);
+		System.out.println(setList(numsList));
+	}
+	
+	public static ArrayList<Integer> setList(ArrayList<Integer> nums)
+	{
+	   ArrayList<Integer> outputList = new ArrayList<Integer>();
+	   for (int i=0; i<nums.size(); i++)   
+	   {
+	       outputList.add(nums.get(i));
+	       if (outputList.get(i)%10==0 && i>0) 
+	           outputList.set(i-1, nums.get(i-1)*2);
+	   }
+	   return outputList;
+	}
+	
+	public static void sleek(String str)
+	{
+		if(str.length()>2)
+		{
+			sleek(str.substring(2));
+			System.out.print(str);
+		}
+		System.out.println("!");
+	}
+	
+	public static ArrayList<String> replaceBad(ArrayList<String> phrases)  
+	{  
+	     int i = 0;  
+	     for (String aPhrase : phrases)  
+	     {  
+	          if (aPhrase.indexOf("bad") >= 0)  
+	          {  
+	               phrases.set(i, "happy thoughts");  
+	          }  
+	          i++;  
+	     }  
+	     return phrases;  
 	}
 
 	public static void stringRecur(String s)
