@@ -6,13 +6,30 @@ public class Test22
 
 	public static void main(String[] args) 
 	{
-		ArrayList<Integer> numsList = new ArrayList<Integer>();
-		numsList.add(10);
-		numsList.add(30);
-		numsList.add(44);
-		numsList.add(26);
-		numsList.add(60);
-		System.out.println(setList(numsList));
+		String jumble = "shehas250antsinher5rooms";  
+		String d = "0123456789";  
+		int n1=0, n2=0;  
+		        
+		for (int i=0; i<jumble.length(); i++)  
+		{  
+		    if(d.indexOf(jumble.substring(i,i+1))>=0)  
+		        n1+=Integer.parseInt(jumble.substring(i,i+1));  
+		    else  
+		        n2++;  
+		}  
+		System.out.println(n1+n2);
+	}
+	
+	public static ArrayList<String> removeBad(ArrayList<String> phrases)  
+	{  
+	     for (String aPhrase : phrases)  
+	     {  
+	          if (aPhrase.indexOf("bad") >= 0)  
+	          {  
+	               phrases.remove(aPhrase);  
+	          }  
+	     }  
+	     return phrases;  
 	}
 	
 	public static ArrayList<Integer> setList(ArrayList<Integer> nums)
