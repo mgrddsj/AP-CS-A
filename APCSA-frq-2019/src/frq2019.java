@@ -83,7 +83,45 @@ class Delimiters
 
 	public ArrayList<String> getDelimitersList(String[] tokens)
 	{
-		
+		ArrayList<String> resultList = new ArrayList<String>();
+		for (String str:tokens)
+		{
+			if (str.equals(openDel) || str.equals(closeDel))
+			{
+				resultList.add(str);	
+			}
+		}
+		return resultList;
+	}
+	
+	public boolean isBalanced(ArrayList<String> delimeters)
+	{
+		int opens=0;
+		int closes=0;
+		for (String str:delimeters)
+		{
+			if (str.equals(openDel))
+			{
+				opens++;
+			}
+			if (str.equals(closeDel))
+			{
+				closes++;
+			}
+		}
+		if (opens!=closes)
+		{
+			return false;
+		}
+		for (int i=0;i<delimeters.size();i++)
+		{
+			if (delimeters.get(i).equals(closeDel) && !delimeters.get(i-1).equals(openDel))
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 }
+
 
