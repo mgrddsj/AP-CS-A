@@ -7,11 +7,7 @@ public class Test22
 
 	public static void main(String[] args) 
 	{
-		int[] abc = new int[5];
-		for (int i=1; i<=5; i++)
-		{
-		    abc[i] = i;
-		}
+		
 		
 
 		
