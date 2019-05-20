@@ -1,196 +1,230 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Test22 
 {
 
 	public static void main(String[] args) 
 	{
-		String jumble = "shehas250antsinher5rooms";  
-		String d = "0123456789";  
-		int n1=0, n2=0;  
-		        
-		for (int i=0; i<jumble.length(); i++)  
-		{  
-		    if(d.indexOf(jumble.substring(i,i+1))>=0)  
-		        n1+=Integer.parseInt(jumble.substring(i,i+1));  
-		    else  
-		        n2++;  
-		}  
-		System.out.println(n1+n2);
-	}
-	
-	public static ArrayList<String> removeBad(ArrayList<String> phrases)  
-	{  
-	     for (String aPhrase : phrases)  
-	     {  
-	          if (aPhrase.indexOf("bad") >= 0)  
-	          {  
-	               phrases.remove(aPhrase);  
-	          }  
-	     }  
-	     return phrases;  
-	}
-	
-	public static ArrayList<Integer> setList(ArrayList<Integer> nums)
-	{
-	   ArrayList<Integer> outputList = new ArrayList<Integer>();
-	   for (int i=0; i<nums.size(); i++)   
-	   {
-	       outputList.add(nums.get(i));
-	       if (outputList.get(i)%10==0 && i>0) 
-	           outputList.set(i-1, nums.get(i-1)*2);
-	   }
-	   return outputList;
-	}
-	
-	public static void sleek(String str)
-	{
-		if(str.length()>2)
+		int[] abc = new int[5];
+		for (int i=1; i<=5; i++)
 		{
-			sleek(str.substring(2));
-			System.out.print(str);
+		    abc[i] = i;
 		}
-		System.out.println("!");
-	}
-	
-	public static ArrayList<String> replaceBad(ArrayList<String> phrases)  
-	{  
-	     int i = 0;  
-	     for (String aPhrase : phrases)  
-	     {  
-	          if (aPhrase.indexOf("bad") >= 0)  
-	          {  
-	               phrases.set(i, "happy thoughts");  
-	          }  
-	          i++;  
-	     }  
-	     return phrases;  
-	}
+		
 
-	public static void stringRecur(String s)
-	{
-		if (s.length() < 15)
-			System.out.println(s);
-		stringRecur(s + "*");
+		
+		
+		
 	}
-
-	public static void test(int[] arr1)
+	public static double averageGolfTeamScores(int[][] golfScores)
 	{
-		int count = 0;
-		for (int i=0; i< arr1.length; i++)
-		{
-			if (arr1[i] != 0)
-			{
-				arr1[count] = arr1[i];
-				count++;
-			}
-		}
-		int[] arr2 = new int[count];
-		for (int i=0; i<count; i++)
-		{
-			arr2[i] = arr1[i];
-		}
-		System.out.println(Arrays.toString(arr2));
-	}
-
-	public static void test2(int[] arr)
-	{
-		int sum=arr[0], i=0;
-		while (i<arr.length)
-		{
-			i++;
-			sum += arr[i];
-		}
-	}
-	
-	public static int nested(int x, int y)
-	{
-	    int q = 0;
-	 
-	    if (x == 1) 
+	    double sum = 0;
+	    for (int i=0; i<golfScores.length; i++)
 	    {
-	        q++;
-	        if (y == 2)
-	            q++;
-	        y++;
-	    }
-	    q++;
-	    if (y == 3) 
-	    {
-	        q++;
-	        if (y == 2) 
+	        for (int j=0; j<golfScores[i].length; j++)
 	        {
-	            q++;
-	            q++;
+	            sum+=golfScores[j][i];
 	        }
 	    }
-	    q++;
-	    return q;
+	    int count = golfScores.length*golfScores[0].length;
+	    return sum/count;
 	}
 	
-	public static int kooky(int a)  
+	public static double calcAverageAge(int[] ages)  
 	{  
-		System.out.println("I'm being called");
-		if (a>10)  
-			return 2;  
-		else  
-			if (a<5)  
-				return 5+kooky(a+2);  
-		return a+kooky(a+1);  
+	     int sum = 0;  
+	     for (int i=0; i<ages.length; i++)  
+	     {  
+	         sum+=i;  
+	     }  
+	     return sum/ages.length;  
 	}
 	
-	public static int processNums(ArrayList<Integer> nums)
+	public static int crush(int x)
 	{
-	    int a = 0;
-	    for (int i=0; i<nums.size(); i++)
+		System.out.println("a");
+	    if(x < 1)
+	        return 1;
+	    else
+	        return x + crush(x-1);
+	}
+	
+	public static int calcSum(int start, int increment, int end)
+    {
+         int sum=start;
+         int count=0;
+         while(sum<end)
+         {
+             sum+=increment;
+             if  (sum%2==0)
+             {
+                 sum+=1;
+                 count++;
+             }
+         }
+         System.out.println(count);
+         return sum;
+    }
+	
+	public static int countString(String str, String search)
+	{
+	    int count = 0;
+
+	    for (int i=0; i<str.length(); i++)
 	    {
-	        a += nums.get((int) (Math.random()*nums.size()));
+	        if (str.indexOf(search)>=0)
+	             count++;
 	    }
-	    return a;
+	    return count;
 	}
+	
+
+	
+	public static int[] getTensDigit (int[] nums)
+	{
+	    int[] tensDigit = new int[nums.length];
+	    for (int i=0; i<nums.length; i++)
+	    {
+	        if (nums[i]>-10 && nums[i]<10 )
+	        {
+	            nums[i]=-1;
+	            tensDigit[i]=-1;
+	        }
+	    }
+	    for (int i=0; i<nums.length; i++)
+	    {
+	        if (nums[i]>0 )
+	            tensDigit[i] = nums[i]%100/10;
+	    }
+	    return tensDigit;
+	}
+	
+	public static void sorter( double[] nums )
+	{
+	    for(int i=0; i< nums.length-1; i++)
+	    {
+	        int curr = i;
+	        for(int j = i+1; j< nums.length; j++)
+	        {
+	            if(nums[j] < nums[curr])
+	                curr = j;
+	        }
+	        if( curr != i)
+	        {
+	            double tempNum = nums[curr];
+	            nums[curr] = nums[i];
+	            nums[i] = tempNum;
+	        }
+	        System.out.println("a");
+	    }
+	}
+	
+	public static void printPrimitivesAndString(int a, double b, boolean c, String d)
+	{
+		a=a*100;
+		b=b+100;
+		c=!c;
+		d=d+d;    
+		System.out.println("method: " + a + ", " + b + ", " + c + ", " + d);
+	}
+	
+	public static String sortStringA(String s)
+	{
+	    ArrayList<String> letters = new ArrayList<String>();
+	    for (int i=0; i<s.length(); i++)
+	    {
+	        letters.add(s.substring(i,i+1));
+	    }
+	    Collections.sort(letters);
+	    String newString="";
+	    for (String e : letters)
+	    {
+	        newString = newString + e;
+	    }
+	    return newString;
+	}
+	public static String  sortStringB (String s)
+	{
+	    ArrayList<String> letters = new ArrayList<String>();
+	    for (int i=0; i<s.length(); i++)
+	    {    
+	        letters.add(s.substring(i,i+1));
+	    }
+	    Collections.sort(letters);
+	    String newString="";
+	    for (String e : letters)
+	    { 
+	        newString = e + newString;
+	    }
+	    return newString;
+	}
+	public static String sortStringC(String s)
+	{
+	    ArrayList<String> letters = new ArrayList<String>();
+	    for (int i=0; i<s.length(); i++)
+	    {
+	        letters.add(s.substring(i,i+1));
+	    }
+	    Collections.sort(letters);
+	    String newString="";
+	    for (int i=letters.size()-1; i>=0; i--)
+	    {
+	        newString+=letters.get(i);
+	    }
+	    return newString;
+	}
+	
+	public static String backwardString(String str)    
+    {
+         String back = "";
+    
+         for (int i=str.length()-1; i>=0; i--)
+         {
+             back += str.substring(i,i+1);
+         }
+         return back;
+    }
+	
+	   public static String sSearch(int[] x, int key)
+	    {
+	        String y = "";
+	        boolean z = false;
+	        for (int i = 0; i < x.length; i++)
+	        {
+	            if (x[i] == key)
+	            {
+	                y += i + " ";
+	                z = true;
+	            }
+	        }
+	        if (!z)
+	            y = "key was not found";
+
+	        return y;
+	    }
+	    
+	    public static void testMethod()
+	    {
+	        int[] y = new int[12];
+	        for (int i = 0; i < y.length; i++)
+	            y[i] = 5*(i/4);
+
+	        System.out.println(sSearch(y, 5));
+	    }
 
 }
 
-class StringMania 
-{
-	private String str;
-
-	public StringMania(String s)
+	class Book
 	{
-		str = s;
+
 	}
 
-	public int stringGymnastics(String s1, int a)
+	class AudioBook extends Book
 	{
-		if (str.indexOf(s1)>=0)
-			if (a>str.indexOf(s1))
-				return a;
-			else
-				return str.indexOf(s1);
-		else
-			return a*-1;
-	}
+		public void pagesPerMinute()
+		{
 
-	public String stringGymnastics(int a)
-	{
-		if (a<str.length())
-			return str.substring(a);
-		else
-			if (str.length()>0)
-				return str.substring(str.length()-1);
-			else
-				return null;
+		}
 	}
-
-	public String stringGymnastics(int a, int b)
-	{
-		if (a>0 && a<b && b<=str.length())
-			return str.substring(a,b);
-		else
-			if (str.length()>0 && a>=0 && a<str.length())
-				return str.substring(a);
-			else
-				return "no";
-	}
-}
