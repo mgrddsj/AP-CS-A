@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class frq2019 
 {
@@ -124,4 +125,21 @@ class Delimiters
 	}
 }
 
-
+class LightBoard
+{
+	private boolean[][] lights;
+	
+	public LightBoard(int numRows, int numCols)
+	{
+		lights = new boolean[numRows][numCols];
+		Random rand = new Random();
+		for (int r=0; r<lights.length; r++)
+		{
+			for (int c=0; c<lights[0].length; c++)
+			{
+				lights[r][c] = (rand.nextInt(10)<=3);
+			}
+		}
+	}
+	
+}
